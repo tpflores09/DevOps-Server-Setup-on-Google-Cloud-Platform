@@ -41,7 +41,8 @@ Creating the Server Environment Setup:
 
 5. Next, we will change the user root password in each of your environments. This is so that we can easily access and connect our VMs from our Anible Management Server. Repeat this step in all of your servers.
     - In the command line, type in "sudo passwd" and enter. It will ask for "New Password: ". When you are typing in your password, it will not be displayed on the screen. So, be sure that you mentally keep up with what you are typing in as your password. You will need to remember this to connect the VMs:
-      ATTACH SCREENSHOT HEREEEEEEEE-----------------------------------------
+      <img width="615" alt="Screenshot 2023-12-05 at 10 04 29 PM" src="https://github.com/tpflores09/CSC2510-001-FinalProject/assets/142537354/ae321e5d-40a0-494a-a19c-4d13ba8860e2">
+
 
 
 6. Next will be adjusting the Ansible Hosts file:
@@ -71,7 +72,7 @@ Creating the Server Environment Setup:
 
 Using the Ansible Playbooks to install packages(Apache, NodeJS, MariaDB) and to automate the deployment of a web application from a Git Repository through a shell script for each environment:
 
-1. 
+
     
 
 
