@@ -1,0 +1,23 @@
+---
+- name: Update Apache, NodeJS, and MariaDB packages
+  hosts: all
+  tasks:
+    - name: Update Apache package
+      apt:
+        name: apache2
+        state: latest
+        update_cache: yes
+
+    - name: Update NodeJS package
+      apt:
+        name: nodejs
+        state: latest
+        update_cache: yes
+
+    - name: Update MariaDB package
+      apt:
+        name: mariadb-server
+        state: latest
+        update_cache: yes
+
+
