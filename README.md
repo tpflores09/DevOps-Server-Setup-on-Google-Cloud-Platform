@@ -44,17 +44,18 @@ Creating the Server Environment Setup:
       <img width="615" alt="Screenshot 2023-12-05 at 10 04 29 PM" src="https://github.com/tpflores09/CSC2510-001-FinalProject/assets/142537354/ae321e5d-40a0-494a-a19c-4d13ba8860e2">
 
 
-
 6. Next will be adjusting the Ansible Hosts file:
    - First, we need to change our directory(cd) into the hidden directory "etc". We will do this by typing into the command line "cd /etc" and hitting enter. Then, typing in "ls" and enter, which will then show the list of all of the directories in the "etc" directory. In this case, we will be looking for the directory "ansible":
-    ATTACH SCREENSHOT HEREEEEEEEE-----------------------------------------
-    
+    <img width="615" alt="Screenshot 2023-12-05 at 10 07 02 PM" src="https://github.com/tpflores09/CSC2510-001-FinalProject/assets/142537354/df8191f9-58c4-471d-bb12-f6111efe6a19">
+
     - Once we locate the "ansible" directory, we will change to that directory by typing in the command line "cd ansible" and enter. We will type in "ls" to see the files. In this case, we want to locate the hosts file:
-    ATTACH SCREENSHOT HEREEEEEEEE-----------------------------------------
+    <img width="615" alt="Screenshot 2023-12-05 at 10 08 22 PM" src="https://github.com/tpflores09/CSC2510-001-FinalProject/assets/142537354/ea0710ab-a9d3-4dfd-bcd0-fde1e83e0ce4">
+
 
     - To access and edit this file, type in the command line "sudo nano hosts" and enter. Now, we need to add our WS and DBS to our hosts file. Throughout the hosts file are example of how to add in different hosts, or servers. Before we can connect our AM to our servers, we need to have written down the Internal IP address of the servers we want to connect to our AM. Once we have the Internal IP address, we can proceed.
     - Scrolling to the end of the hosts file, type in each of your groups with your Internal IP address as well as your root user and password, the IP and user in the screenshot are an example only(beware of the spaces):
-    ATTACH SCREENSHOT HEREEEEEEEE-----------------------------------------
+    <img width="613" alt="Screenshot 2023-12-05 at 10 13 13 PM" src="https://github.com/tpflores09/CSC2510-001-FinalProject/assets/142537354/aee7b94c-8a51-4312-8b9a-7e83babea46d">
+
 
     - Now that we have added our servers into the hosts file and added in our root user and password, we can use the keys "Control ^ + X", then "Y" for yes, and hit enter. This will save our edits into the hosts file, now connecting our Web Servers(WS) and Database Servers(DBS) to our Ansible Management Server(AM).
     - Once you have completed these steps, lets clear out the terminal by typing in the command line "clear" and enter.
