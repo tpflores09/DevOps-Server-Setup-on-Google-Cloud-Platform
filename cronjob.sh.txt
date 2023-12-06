@@ -1,0 +1,15 @@
+#! /usr/bin/env bash
+
+# Path to the Ansible playbook
+PLAYBOOK_PATH="/home/teperdomof42/ansible_playbooks/updates.yml"
+
+# Environment variables
+export ANSIBLE_HOST_KEY_CHECKING=False
+
+
+# Run the Ansible playbook
+ansible-playbook $PLAYBOOK_PATH
+
+* * * * * /home/teperdomof42/ansible_playbooks/cronjob.sh >> /home/teperdomof42/ansible_playbooks/logfile.log 2>$1
+
+

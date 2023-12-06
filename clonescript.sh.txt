@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+eval "$(ssh-agent -s)"
+ssh-add .ssh/yourprivatesshkey
+
+mkdir /var/www/html && cd /var/www/html
+git clone git@github.com:ttu-bburchfield/swollenhippofinal.git
+git checkout $1
+
+

@@ -1,0 +1,28 @@
+#! /usr/bin/env bash
+
+# Prompt user for environment
+read -p "Enter the environment (Dev, Test, Prod): " ENVIRONMENT
+
+# Set up server environment and deploy web application based on the environment
+case "$ENVIRONMENT" in
+  Dev)
+    # Call Ansible playbook for Dev environment
+    ansible-playbook dev-playbook.yml
+    ;;
+  Test)
+    # Call Ansible playbook for Test environment
+    ansible-playbook test-playbook.yml
+    ;;
+  Prod)
+    # Call Ansible playbook for Prod environment
+    ansible-playbook prod-playbook.yml
+    ;;
+  *)
+    echo "Invalid environment specified."
+    exit 1
+    ;;
+esac
+
+# Log actions
+echo "Deployment for $ENVIRONMENT environment completed."
+
