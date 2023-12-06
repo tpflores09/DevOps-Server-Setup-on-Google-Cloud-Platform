@@ -107,7 +107,7 @@ Before you begin, make a new directory by typing in the command line "mkdir ansi
 
 
 Troubleshooting Steps and Common Issues:
-	•	Script fails to execute: Ensure the script is executable and the shebang line is correct.
-	•	Cron job not running: Check the cron syntax and ensure the cron is running.
-	•	Ansible playbook errors: Verify the playbook syntax, check for typos, and ensure all required roles and variables are defined.
-	•	Git repository issues: Check for connectivity to the Git server, ensure SSH keys are set up correctly, and verify branch names.
+- Script fails to execute: Ensure the script is executable and the shebang line is correct.
+- Cron job not running: Check the cron syntax and ensure the cron is running.
+- Ansible playbook errors: Verify the playbook syntax, check for typos, and ensure all required roles and variables are defined.
+- Git repository issues: Check for connectivity to the Git server, ensure SSH keys are set up correctly, and verify branch names.
