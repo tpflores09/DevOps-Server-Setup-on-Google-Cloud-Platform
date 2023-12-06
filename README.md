@@ -75,29 +75,39 @@ Creating the Server Environment Setup:
 
 -----------------------------------------------------------------------------------------------
 
-Using the Ansible Playbooks to install packages(Apache, NodeJS, MariaDB) and to automate the deployment of a web application from a Git Repository through a shell script for each environment:
+Use the Ansible Playbooks to install packages(Apache, NodeJS, MariaDB) and to automate the deployment of a web application from a Git Repository through a shell script for each environment. 
+Before you begin, make a new directory by typing in the command line "mkdir ansible-playbooks". Then, "cd ansible-playbooks". Ensure that you have downloaded the attached files into the new directory:
+	<img width="575" alt="Screenshot 2023-12-05 at 11 46 40 PM" src="https://github.com/tpflores09/CSC2510-001-FinalProject/assets/142537354/4e6a4de8-ef2f-4679-aa3b-dbe77873282f">
 
 
-Running the Bash Script:
-	1	Download the script to your server.
-	2	Make the script executable by running chmod 755 your_script.sh.
-	3	Execute the script by running ./your_script.sh.
-	4	Follow the prompts to enter the necessary configuration parameters for your environment.
-Configuring Cron Jobs:
-	1	Open the crontab for editing by running crontab -e.
-	2	Add cron job entries for your tasks. For example:
-	◦	To run a script every minute: * * * * * /path/to/your/script.sh
-	◦	To update packages daily at midnight: 0 0 * * * ansible-playbook /path/to/update-packages-playbook.yml
-	3	Save and exit the crontab editor.
-Updating the Server Environment:
-	1	Navigate to the directory containing your Ansible playbooks, or “ansible-playbooks”.
-	2	Run the Ansible playbook for the appropriate environment by executing ansible-playbook environment-playbook.yml.
-Configuring the Git Repository:
-	1	Clone the repository to your local machine.
-	2	Configure the remote repository for each environment by setting the appropriate branch.
-	3	Push updates to the repository as needed.
+
+- Running the "specific-environment" Bash Script:
+	1. Make the script executable by running chmod 755 specific-environments.sh.
+	2. Execute the script by running ./specific-environments.sh.
+	3. Follow the prompts to enter the necessary configuration parameters for your environment.
+
+- Configuring Cron Jobs:
+	1. Open the crontab for editing by running crontab -e.
+	2. Add cron job entries for your tasks. For example:
+	3. To run a script every minute: * * * * * /home/teperdomof42/ansible_playbooks/cronjob.sh
+	4. To update packages daily at midnight: 0 0 * * * ansible-playbook /home/teperdomof42/ansible_playbooks/updates.yml
+	5.Save and exit the crontab editor.
+
+- Updating the Server Environment:
+	1. Navigate to the directory containing your Ansible playbooks, or “ansible-playbooks”.
+	2. Run the Ansible playbook for the appropriate environment (dev,prod,test) by executing ansible-playbook ____-playbook.yml.
+
+- Configuring the Git Repository:
+	1. Clone the repository to your local machine by first making the script executable by running chmod 755 clonescript.sh. Then, by running ./clonescript.sh.
+	2. Configure the remote repository for each environment by setting the appropriate branch.
+	3. Push updates to the repository as needed.
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
 Troubleshooting Steps and Common Issues:
 	•	Script fails to execute: Ensure the script is executable and the shebang line is correct.
-	•	Cron job not running: Check the cron syntax and ensure the cron daemon is running.
+	•	Cron job not running: Check the cron syntax and ensure the cron is running.
 	•	Ansible playbook errors: Verify the playbook syntax, check for typos, and ensure all required roles and variables are defined.
 	•	Git repository issues: Check for connectivity to the Git server, ensure SSH keys are set up correctly, and verify branch names.
