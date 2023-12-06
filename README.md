@@ -66,9 +66,9 @@ Creating the Server Environment Setup:
 7. Next, we will adjust the root login and hosts permissions for all of our VMs through our SSH. Repeat these steps as needed:
   - In the command line, type in "sudo nano /etc/ssh/sshd_config" and hit enter.
   - We need to locate 2 specific options in this file. First is "PermitRootLogin" needs to be changed from "no" to "yes". Second, the first "PasswordAuthentication yes" needs to be uncommented while the second "PasswordAuthentication no" needs to be commented out(#). Both options should end up looking like this:
-<img width="616" alt="Screenshot 2023-12-05 at 10 17 22 PM" src="https://github.com/tpflores09/CSC2510-001-FinalProject/assets/142537354/a1493613-149e-47da-83ac-32e8d1dff3c4">
+	<img width="616" alt="Screenshot 2023-12-05 at 10 17 22 PM" src="https://github.com/tpflores09/CSC2510-001-FinalProject/assets/142537354/a1493613-149e-47da-83ac-32e8d1dff3c4">
 
-<img width="616" alt="Screenshot 2023-12-05 at 10 18 17 PM" src="https://github.com/tpflores09/CSC2510-001-FinalProject/assets/142537354/702fea51-ff88-427a-be0a-a6e015d82ae5">
+	<img width="616" alt="Screenshot 2023-12-05 at 10 18 17 PM" src="https://github.com/tpflores09/CSC2510-001-FinalProject/assets/142537354/702fea51-ff88-427a-be0a-a6e015d82ae5">
 
 
   - Once you have made the changes, we can use the keys "Control ^ + X", then "Y" for yes, and hit enter to save the changes into the sshd_config file.
