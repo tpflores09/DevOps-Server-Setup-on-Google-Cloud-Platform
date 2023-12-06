@@ -1,0 +1,37 @@
+---
+  - name: ApacheInstall
+    hosts: webserver
+    tasks:
+      - name: Install Apache
+        apt:
+          name: apache2
+          state: latest
+
+  - name: NodeJSInstall
+    hosts: webserver
+    tasks:
+      - name: Install nodeJS
+        apt:
+          name: nodejs
+          state: latest
+
+  - name: MariaDBInstall
+    hosts: databaseserver
+    tasks:
+      - name: Install MariaDB
+        apt:
+          name: mariadb-server
+          state: latest
+
+  - name: Cloning from git repo
+    hosts: all
+    tasks:
+      - name: Clone repo
+        command: "./clonescript.sh"
+        copy:
+          src: "clonescript.sh"
+          dest: "~/clonescript.sh"
+          owner: root
+          group: root
+          mode: "0755"
+
