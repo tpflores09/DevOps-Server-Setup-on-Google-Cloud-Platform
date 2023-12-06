@@ -48,6 +48,7 @@ Creating the Server Environment Setup:
    - First, we need to change our directory(cd) into the hidden directory "etc". We will do this by typing into the command line "cd /etc" and hitting enter. Then, typing in "ls" and enter, which will then show the list of all of the directories in the "etc" directory. In this case, we will be looking for the directory "ansible":
     <img width="615" alt="Screenshot 2023-12-05 at 10 07 02 PM" src="https://github.com/tpflores09/CSC2510-001-FinalProject/assets/142537354/df8191f9-58c4-471d-bb12-f6111efe6a19">
 
+
     - Once we locate the "ansible" directory, we will change to that directory by typing in the command line "cd ansible" and enter. We will type in "ls" to see the files. In this case, we want to locate the hosts file:
     <img width="615" alt="Screenshot 2023-12-05 at 10 08 22 PM" src="https://github.com/tpflores09/CSC2510-001-FinalProject/assets/142537354/ea0710ab-a9d3-4dfd-bcd0-fde1e83e0ce4">
 
@@ -65,7 +66,10 @@ Creating the Server Environment Setup:
 7. Next, we will adjust the root login and hosts permissions for all of our VMs through our SSH. Repeat these steps as needed:
   - In the command line, type in "sudo nano /etc/ssh/sshd_config" and hit enter.
   - We need to locate 2 specific options in this file. First is "PermitRootLogin" needs to be changed from "no" to "yes". Second, the first "PasswordAuthentication yes" needs to be uncommented while the second "PasswordAuthentication no" needs to be commented out(#). Both options should end up looking like this:
-    ATTACH SCREENSHOT HEREEEEEEE ----------------------------------
+<img width="616" alt="Screenshot 2023-12-05 at 10 17 22 PM" src="https://github.com/tpflores09/CSC2510-001-FinalProject/assets/142537354/a1493613-149e-47da-83ac-32e8d1dff3c4">
+
+<img width="616" alt="Screenshot 2023-12-05 at 10 18 17 PM" src="https://github.com/tpflores09/CSC2510-001-FinalProject/assets/142537354/702fea51-ff88-427a-be0a-a6e015d82ae5">
+
 
   - Once you have made the changes, we can use the keys "Control ^ + X", then "Y" for yes, and hit enter to save the changes into the sshd_config file.
 
@@ -74,22 +78,9 @@ Creating the Server Environment Setup:
 Using the Ansible Playbooks to install packages(Apache, NodeJS, MariaDB) and to automate the deployment of a web application from a Git Repository through a shell script for each environment:
 
 
-    
-
-
-
-
-
-
-
-
-
-then how to make a new directory, then how to make new files. basically everyting you have done up to this point
-
-
 Running the Bash Script:
 	1	Download the script to your server.
-	2	Make the script executable by running chmod +x your_script.sh.
+	2	Make the script executable by running chmod 755 your_script.sh.
 	3	Execute the script by running ./your_script.sh.
 	4	Follow the prompts to enter the necessary configuration parameters for your environment.
 Configuring Cron Jobs:
